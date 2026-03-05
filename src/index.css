@@ -1,0 +1,222 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#020617);
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+color:white;
+}
+
+/* LAYOUT */
+
+.layout{
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+background:#0b1220;
+border-right:1px solid rgba(255,255,255,0.05);
+padding:30px;
+position:sticky;
+top:0;
+height:100vh;
+}
+
+.logo{
+color:#f97316;
+margin-bottom:40px;
+font-size:22px;
+font-weight:600;
+}
+
+.menu{
+list-style:none;
+}
+
+.menu li{
+padding:12px 14px;
+margin-bottom:8px;
+border-radius:8px;
+cursor:pointer;
+opacity:.7;
+transition:.2s;
+}
+
+.menu li:hover{
+background:rgba(255,255,255,0.05);
+opacity:1;
+}
+
+.menu li.active{
+background:rgba(249,115,22,0.15);
+color:#f97316;
+opacity:1;
+}
+
+/* CONTENEDOR */
+
+.container{
+flex:1;
+min-height:100vh;
+padding:50px;
+max-width:1400px;
+margin:auto;
+}
+
+/* TOPBAR */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.title{
+font-size:36px;
+font-weight:700;
+letter-spacing:-1px;
+}
+
+/* CONTROLES */
+
+.controls{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
+
+select{
+background:#1e293b;
+border:1px solid rgba(255,255,255,0.08);
+padding:12px 18px;
+border-radius:10px;
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:.2s;
+}
+
+select:hover{
+background:#273549;
+}
+
+button{
+background:linear-gradient(135deg,#f97316,#ea580c);
+border:none;
+padding:12px 24px;
+border-radius:10px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.25s;
+box-shadow:0 6px 20px rgba(249,115,22,0.35);
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 12px 30px rgba(249,115,22,0.5);
+}
+
+/* CHARTS GRID */
+
+.charts-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:30px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(30,41,59,0.6);
+padding:28px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.35);
+backdrop-filter:blur(6px);
+transition:.3s;
+height:420px;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 25px 60px rgba(0,0,0,0.45);
+}
+
+h2{
+font-size:22px;
+margin-bottom:20px;
+font-weight:600;
+}
+
+/* CHART WRAPPER */
+
+.chart-wrapper{
+position:relative;
+height:320px;
+width:100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.sidebar{
+display:none;
+}
+
+.container{
+padding:30px 20px;
+}
+
+/* TOPBAR PARA MOVIL */
+
+.topbar{
+flex-direction:column;
+align-items:center;
+}
+
+/* TITULO CENTRADO */
+
+.title{
+font-size:26px;
+text-align:center;
+margin-bottom:18px;
+}
+
+/* FILTROS HORIZONTALES */
+
+.controls{
+display:flex;
+flex-direction:row;
+gap:10px;
+width:100%;
+flex-wrap:nowrap;
+}
+
+.controls select{
+flex:1;
+min-width:0;
+}
+
+.controls button{
+flex:1;
+padding:12px 10px;
+min-width:0;
+}
+
+}
+
+.error{
+margin-bottom:20px;
+color:#ff6b6b;
+font-size:14px;
+}
