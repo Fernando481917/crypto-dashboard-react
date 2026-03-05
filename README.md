@@ -1,16 +1,133 @@
-# React + Vite
+# Crypto Market Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive dashboard built with React that visualizes cryptocurrency market data using the CoinGecko API.
 
-Currently, two official plugins are available:
+The application displays price trends and market volume using dynamic charts with filters for cryptocurrency and time range.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://crypto-dashboard-react-one.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.jpg)
+
+### Filters
+![Filters](screenshots/filters.jpg)
+
+### Chart Interaction (Zoom)
+![Zoom](screenshots/zoom.jpg)
+
+---
+
+# Technologies Used
+
+- React
+- Vite
+- Chart.js
+- React Chart.js 2
+- CoinGecko API
+- Vitest (unit testing)
+- React Testing Library
+- CSS Grid & Flexbox
+
+---
+
+# Features
+
+- Interactive cryptocurrency dashboard
+- Real-time data from CoinGecko API
+- Two dynamic charts:
+  - Price chart (Line chart)
+  - Market volume chart (Bar chart)
+- Data filters:
+  - Cryptocurrency selector
+  - Time range selector
+- Chart interactivity:
+  - Zoom
+  - Pan
+- Responsive design for desktop and mobile
+- Error handling for API requests
+- Accessibility improvements using ARIA attributes
+- Unit testing with Vitest
+
+---
+
+# Installation
+
+Clone the repository:
+
+git clone https://github.com/Fernando481917/crypto-dashboard-react.git
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
+npm run dev
+
+Open the browser at:
+
+http://localhost:5173
+
+---
+
+# Running Tests
+
+Run the test suite:
+
+npm test
+
+Tests are implemented using Vitest and React Testing Library.
+
+---
+
+# Project Structure
+
+crypto-dashboard-react
+│
+├── public
+├── screenshots
+│
+├── src
+│   ├── components
+│   │   ├── PriceChart.jsx
+│   │   ├── VolumeChart.jsx
+│   │   ├── LiquidEther.jsx
+│   │   └── LiquidEther.css
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── App.test.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+
+---
+
+# API Used
+
+CoinGecko API
+
+https://www.coingecko.com/en/api
+
+Endpoint used:
+
+/coins/{id}/market_chart
+
+---
+
+# Author
+
+Fernando Sánchez
+Frontend Developer
